@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 :root {
   --navbar-bg: #000000;
   --main-blue: #6495ED;
@@ -10,55 +9,37 @@
   --box-shadow: 0 8px 24px rgba(100,149,237,0.25);
   --mint: #D8F3DC;
 }
-
 body {
-  position: relative;
-  background-color: var(--section-bg);
   font-family: 'Poppins', sans-serif;
-  color: var(--text-color);
+  background: var(--section-bg);
   margin: 0;
   padding: 0;
+  color: var(--text-color);
   overflow-x: hidden;
   padding-top: 70px;
 }
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background-image: url('images/background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  opacity: 0.16;
-  pointer-events: none;
-}
-
 header {
   background: var(--navbar-bg);
-  box-shadow: var(--box-shadow);
-  padding: 0.7rem 1rem;
   position: fixed;
-  width: 100vw;
-  height: 70px;
-  line-height: 70px;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 70px;
   z-index: 1000;
+  box-shadow: var(--box-shadow);
 }
-
 .navbar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100vw;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
-  width: 100vw;
   padding: 0 1rem;
+  position: relative;
+  z-index: 11;
 }
-
 .nav-logo {
   height: 48px;
   margin: 0 10px;
@@ -70,34 +51,27 @@ header {
   flex-shrink: 0;
   object-fit: contain;
 }
-
 .nav-links {
   display: flex;
-  gap: 18px;
+  gap: 36px;
   justify-content: center;
   align-items: center;
-  padding-top: 7px;
-  background: transparent;
-  white-space: nowrap;
 }
-
-.nav-links a {
+nav a {
   color: #fff;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 5px;
+  padding: 8px 12px;
   font-size: 1rem;
-  transition: background 0.25s, color 0.25s;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
   white-space: nowrap;
 }
-
-.nav-links a:hover {
+nav a:hover {
   background: var(--hover-green);
   color: var(--text-color);
 }
-
 .hamburger {
   display: none;
   background: none;
@@ -105,57 +79,8 @@ header {
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
-  margin-left: auto;
-  z-index: 1010;
+  margin-left: 10px;
 }
-
-/* Responsive Mobile Styles */
-@media (max-width: 700px) {
-  header {
-    height: 56px;
-    padding: 0.3rem 1rem;
-    line-height: normal;
-  }
-  .navbar-content {
-    padding: 0 8px;
-  }
-  .nav-logo {
-    height: 32px;
-    margin: 0 6px;
-  }
-  .nav-logo.large {
-    height: 36px;
-    margin: 0 6px;
-  }
-  .hamburger {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    flex-direction: column;
-    background: var(--navbar-bg);
-    box-shadow: 0 4px 16px rgba(100,149,237,0.15);
-    padding-bottom: 12px;
-    z-index: 999;
-    display: none;
-  }
-  .nav-links.open {
-    display: flex;
-  }
-  .nav-links a {
-    width: 100vw;
-    padding: 12px 0;
-    text-align: center;
-    font-size: 1.1rem;
-    border-bottom: 1px solid #222;
-    margin: 0;
-  }
-}
-
 .hero-card,
 .poster-card,
 .coordinators-card,
@@ -176,7 +101,6 @@ header {
   align-items: center;
   text-align: center;
 }
-
 .hero-card h1,
 .poster-card h2,
 .coordinators-card h2,
@@ -189,14 +113,12 @@ header {
   margin-bottom: 2rem;
   text-align: center;
 }
-
 .hero-registerblock {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.1rem;
 }
-
 .poster-thumb {
   width: 98px;
   height: 98px;
@@ -205,7 +127,6 @@ header {
   box-shadow: 0 2px 9px rgba(100,149,237,0.10);
   margin-bottom: 0.5rem;
 }
-
 .mint-block {
   background: var(--mint);
   color: var(--main-blue);
@@ -217,7 +138,6 @@ header {
   max-width: 600px;
   text-align: center;
 }
-
 .btn-green {
   background: var(--main-blue);
   color: var(--card-bg);
@@ -232,18 +152,15 @@ header {
   display: inline-block;
   margin-top: 18px;
 }
-
 .btn-green:hover {
   background: var(--hover-green);
   color: var(--text-color);
   box-shadow: 0 6px 18px rgba(100,149,237,0.35);
 }
-
 .poster-card h2 {
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
-
 .poster-img {
   width: 100%;
   max-width: 600px;
@@ -254,13 +171,11 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
-
 .poster-card a.btn-green {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-
 .coordinators-container {
   display: flex;
   gap: 2.2rem;
@@ -268,7 +183,6 @@ header {
   justify-content: center;
   margin-top: 2rem;
 }
-
 .coordinator-box {
   background: var(--card-bg);
   border-radius: 22px;
@@ -281,7 +195,6 @@ header {
   flex-direction: column;
   align-items: center;
 }
-
 .coordinator-img {
   width: 100px;
   height: 100px;
@@ -290,20 +203,17 @@ header {
   margin-bottom: 18px;
   border: 3px solid var(--main-blue);
 }
-
 .coordinator-name {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--main-blue);
   margin-bottom: 8px;
 }
-
 .coordinator-role {
   color: var(--text-color);
   font-size: 1.02rem;
   font-weight: 550;
 }
-
 .members-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -312,7 +222,6 @@ header {
   justify-items: center;
   width: 100%;
 }
-
 .member-box {
   background: var(--card-bg);
   border-radius: 22px;
@@ -325,7 +234,6 @@ header {
   flex-direction: column;
   align-items: center;
 }
-
 .member-img {
   width: 100px;
   height: 100px;
@@ -334,7 +242,6 @@ header {
   margin-bottom: 18px;
   border: 3px solid var(--main-blue);
 }
-
 .member-name {
   font-size: 1.13rem;
   font-weight: 700;
@@ -342,25 +249,21 @@ header {
   margin-bottom: 6px;
   letter-spacing: 0.05em;
 }
-
 .member-role {
   color: var(--text-color);
   font-size: 1.02rem;
   font-weight: 550;
   letter-spacing: 0.03em;
 }
-
 .contact-card {
   padding-bottom: 2.7rem;
   text-align: center;
 }
-
 .contact-card h2 {
   margin-bottom: 1.7rem;
   color: var(--main-blue);
   text-align: center;
 }
-
 .contact-card p {
   display: block;
   font-size: 1.08rem;
@@ -368,7 +271,6 @@ header {
   font-weight: 500;
   text-align: center;
 }
-
 .social {
   display: flex;
   justify-content: center;
@@ -376,7 +278,6 @@ header {
   margin-top: 1.2rem;
   align-items: center;
 }
-
 .social a .bx {
   background: var(--mint);
   color: var(--main-blue);
@@ -385,12 +286,10 @@ header {
   border-radius: 50%;
   transition: background 0.3s, color 0.3s;
 }
-
 .social a .bx:hover {
   background: var(--main-blue);
   color: var(--section-bg);
 }
-
 footer {
   background: var(--navbar-bg);
   color: var(--card-bg);
@@ -400,7 +299,6 @@ footer {
   margin-top: 2.8rem;
   border-radius: 0 0 24px 24px;
 }
-
 .about-card {
   background: var(--mint);
   border-radius: 28px;
@@ -415,7 +313,6 @@ footer {
   font-size: 1.13rem;
   box-sizing: border-box;
 }
-
 .about-card h2 {
   text-align: center;
   color: var(--main-blue);
@@ -424,7 +321,6 @@ footer {
   font-size: 2.2rem;
   letter-spacing: 0.01em;
 }
-
 .about-content h3 {
   color: var(--main-blue);
   font-weight: 700;
@@ -433,14 +329,12 @@ footer {
   font-size: 1.3rem;
   letter-spacing: 0.01em;
 }
-
 .about-content p {
   margin-bottom: 1.1rem;
   line-height: 1.68;
   font-size: 1.12rem;
   box-sizing: border-box;
 }
-
 .about-content ul.about-highlights {
   margin-top: 1.2rem;
   margin-bottom: 1rem;
@@ -448,7 +342,6 @@ footer {
   font-weight: 500;
   box-sizing: border-box;
 }
-
 .about-content ul.about-highlights li {
   margin-bottom: 0.85rem;
   font-size: 1.08rem;
@@ -459,7 +352,6 @@ footer {
   color: var(--text-color);
   box-sizing: border-box;
 }
-
 .about-photo-wrapper {
   width: 100%;
   display: flex;
@@ -467,7 +359,6 @@ footer {
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .about-photo {
   width: 95%;
   max-width: 540px;
@@ -481,7 +372,6 @@ footer {
   display: block;
   margin: 0 auto;
 }
-
 .countdown-card, .agenda-card {
   background: rgba(216, 243, 220, 0.7);
   border-radius: 28px;
@@ -494,13 +384,11 @@ footer {
   width: 100%;
   box-sizing: border-box;
 }
-
 .countdown-card h2, .agenda-card h2 {
   color: var(--main-blue);
   margin-bottom: 1.8rem;
   font-weight: 700;
 }
-
 #countdown-timer {
   display: flex;
   justify-content: center;
@@ -512,7 +400,6 @@ footer {
   width: 100%;
   box-sizing: border-box;
 }
-
 #countdown-timer div {
   background: var(--card-bg);
   border-radius: 14px;
@@ -522,15 +409,12 @@ footer {
   min-width: 72px;
   box-sizing: border-box;
 }
-
 #countdown-timer span {
   font-size: 2.2rem;
   display: block;
   margin-bottom: 4px;
   font-weight: 700;
 }
-
-/* Responsive styles */
 @media (max-width: 1100px) {
   .navbar-content, .hero-card, .poster-card, .coordinators-card, .contact-card, .members-card, .about-card {
     max-width: 100%;
@@ -544,7 +428,6 @@ footer {
     padding: 1.2rem 0.25rem 1.3rem 0.25rem;
   }
 }
-
 @media (max-width: 900px) {
   .members-container {
     grid-template-columns: repeat(2, 1fr);
@@ -554,7 +437,6 @@ footer {
     gap: 1.2rem;
   }
 }
-
 @media (max-width: 800px) {
   .about-card {
     padding: 1.3rem 0.7rem;
@@ -576,68 +458,60 @@ footer {
     border-radius: 14px;
   }
 }
-
 @media (max-width: 700px) {
   header {
-    padding: 0.5rem 0;
-    height: auto;
+    height: 56px;
+    padding: 0 0.5rem;
   }
   .navbar-content {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100vw;
-    max-width: 100vw;
-    padding: 0;
-    box-sizing: border-box;
-    gap: 4px;
+    padding: 0 8px;
+    position: relative;
   }
   .nav-logo, .nav-logo.large {
-    margin: 5px auto;
-    height: 32px;
-    max-width: 80vw;
+    height: 28px;
+    margin: 0 2px;
+    max-width: 80px;
   }
-  .nav-logo.large {
-    height: 38px;
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 10px;
   }
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    gap: 0;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(100,149,237,0.14);
+    padding-bottom: 12px;
+    z-index: 99;
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
   }
   nav a {
-    font-size: 0.96rem;
-    padding: 7px 6px;
-  }
-  .about-card {
-    padding: 1.1rem 0.3rem;
-    max-width: 100vw;
-    margin: 2rem 0.1rem;
-  }
-  .countdown-card, .agenda-card {
-    padding: 1.5rem 0.4rem;
-    max-width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 18px;
-  }
-  #countdown-timer {
-    gap: 0.8rem;
-    font-size: 1.05rem;
-  }
-  #countdown-timer div {
-    min-width: 60px;
-    padding: 0.7rem 0.6rem;
-  }
-  #countdown-timer span {
-    font-size: 1.37rem;
-  }
-  main, body {
-    padding-top: 110px; /* ADJUST THIS VALUE IF NAVBAR IS SHORTER/TALLER */
+    width: 100vw;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.14rem;
+    border-bottom: 1px solid #222;
+    color: #fff;
+    margin: 0;
   }
 }
-
 @media (max-width: 650px) {
   .hero-card,
   .poster-card,
@@ -675,7 +549,6 @@ footer {
     border-radius: 14px;
   }
 }
-
 @media (max-width: 440px) {
   .hero-card h1,
   .poster-card h2,
@@ -696,48 +569,5 @@ footer {
     width: 100vw;
     min-width: 160px;
     border-radius: 10px;
-  }
-}
-
-/* Responsive Mobile Navbar Hamburger Styles */
-
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  margin-left: auto;
-  z-index: 1010;
-}
-
-@media (max-width: 700px) {
-  .hamburger {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    flex-direction: column;
-    background: var(--navbar-bg);
-    box-shadow: 0 4px 16px rgba(100,149,237,0.15);
-    padding-bottom: 12px;
-    z-index: 999;
-    display: none;
-  }
-  .nav-links.open {
-    display: flex;
-  }
-  .nav-links a {
-    width: 100vw;
-    padding: 12px 0;
-    text-align: center;
-    font-size: 1.1rem;
-    border-bottom: 1px solid #222;
-    margin: 0;
   }
 }
