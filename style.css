@@ -584,6 +584,13 @@ footer {
     border-radius: 10px;
   }
 }
+@media (max-width: 700px) {
+  .countdown-card, .agenda-card {
+    background: rgba(216, 243, 220, 0.7) !important;
+  }
+}
+
+
 
 
 
