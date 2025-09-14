@@ -100,9 +100,7 @@ nav a:hover {
   color: var(--text-color);
 }
 
-.hamburger {
-  display: none !important;
-}
+
 
 .hero-card,
 .poster-card,
@@ -902,6 +900,64 @@ nav a:hover {
     margin: 0;
   }
 }
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 10px;
+  z-index: 1001;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 700px) {
+  /* Show hamburger on small screens */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide links initially */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(100,149,237,0.14);
+    padding-bottom: 12px;
+    z-index: 999;
+    display: none;
+  }
+
+  /* When toggled open */
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Mobile link styling */
+  nav a {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom: 1px solid #222;
+    color: #fff;
+    margin: 0;
+  }
+}
+
 
 
 
