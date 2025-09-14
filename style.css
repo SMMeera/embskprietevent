@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  padding-top: 70px;
 }
 body::before {
   content: "";
@@ -36,6 +37,8 @@ header {
   padding: 0.7rem 1rem;
   position: fixed;
   width: 100vw;
+  height: 70px;
+  line-height: 70px;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -89,26 +92,6 @@ nav a:hover {
 }
 .hamburger {
   display: none !important;
-}
-@media (max-width: 600px) {
-  .navbar-content {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .nav-logo, .nav-logo.large {
-    margin: 8px auto;
-    height: 40px;
-  }
-  .nav-links {
-    flex-grow: unset;
-    justify-content: center;
-    gap: 10px;
-    margin: 6px 0 10px 0;
-  }
-  nav a {
-    font-size: 0.9rem;
-    padding: 6px 10px;
-  }
 }
 .hero-card,
 .poster-card,
