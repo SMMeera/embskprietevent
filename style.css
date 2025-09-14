@@ -373,7 +373,7 @@ footer {
   margin: 0 auto;
 }
 .countdown-card, .agenda-card {
-  background: rgba(216, 243, 220, 0.7);
+  background: var(--mint);
   border-radius: 28px;
   box-shadow: var(--box-shadow);
   max-width: 1200px;
@@ -571,3 +571,4 @@ footer {
     border-radius: 10px;
   }
 }
+
