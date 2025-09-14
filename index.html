@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
 </head>
 <body>
-  
   <header>
     <div class="navbar-content">
       <img src="images/kprlogo.png" alt="KPRIET Logo" class="nav-logo"/>
+      
+      <!-- Hamburger menu button for mobile -->
+      <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="about.html" target="_blank" rel="noopener">About Us</a>
@@ -23,20 +26,17 @@
       <img src="images/embslogo.png" alt="EMBS Logo" class="nav-logo large"/>
     </div>
   </header>
-
   
   <section class="card hero-card" id="home">
     <h1>Welcome to IEEE KPRIET EMBS SBC</h1>
     <div class="mint-block">
         Where Biomedical Innovation Meets Student Excellence
-      </div>
+    </div>
     <div class="hero-registerblock">
       <img src="images/poster.jpg" class="poster-thumb" alt="Event Poster" />
-      
       <a href="https://forms.gle/rcLvP1jVx6STgY4SA" target="_blank" class="btn-green">Register Now</a>
     </div>
   </section>
-
   
   <section class="countdown-card">
     <h2>Event Countdown</h2>
@@ -47,17 +47,12 @@
       <div><span id="seconds">00</span><br>Seconds</div>
     </div>
   </section>
-
-  
-
-
   
   <section class="card poster-card" id="poster">
     <h2>Event Poster</h2>
     <img src="images/poster.jpg" class="poster-img" alt="Event Poster" />
     <a href="https://forms.gle/rcLvP1jVx6STgY4SA" target="_blank" class="btn-green">Register Now</a>
   </section>
-
   
   <section class="card coordinators-card" id="coordinators">
     <h2>Our Coordinators</h2>
@@ -74,7 +69,6 @@
       </div>
     </div>
   </section>
-
   
   <section class="card contact-card" id="contact">
     <h2>Contact Us</h2>
@@ -86,16 +80,18 @@
       <a href="https://www.youtube.com/@KPRIETOfficial" target="_blank" rel="noopener"><i class="bx bxl-youtube"></i></a>
     </div>
   </section>
-
+  
   <footer>
     <p>&copy; 2025 KPRIET EMBS. All Rights Reserved.</p>
   </footer>
 
-  
   <script>
-    
-    const eventDate = new Date(2025, 8, 26, 9, 0, 0); 
+    // Toggle mobile nav menu
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
 
+    const eventDate = new Date(2025, 8, 26, 9, 0, 0);
     function updateCountdown() {
       const now = new Date();
       const diff = eventDate - now;
@@ -108,18 +104,13 @@
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
-
       document.getElementById('days').textContent = days.toString().padStart(2,'0');
       document.getElementById('hours').textContent = hours.toString().padStart(2,'0');
       document.getElementById('minutes').textContent = minutes.toString().padStart(2,'0');
       document.getElementById('seconds').textContent = seconds.toString().padStart(2,'0');
     }
-
     updateCountdown();
     const timerInterval = setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
-
-
-
