@@ -7,19 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const href = this.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(href).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
-
-
-const eventDate = new Date(2025, 8, 26, 9, 0, 0); 
+const eventDate = new Date(2025, 8, 26, 9, 0, 0);
 
 function updateCountdown() {
   const now = new Date();
@@ -34,13 +34,11 @@ function updateCountdown() {
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  document.getElementById('days').textContent = days.toString().padStart(2,'0');
-  document.getElementById('hours').textContent = hours.toString().padStart(2,'0');
-  document.getElementById('minutes').textContent = minutes.toString().padStart(2,'0');
-  document.getElementById('seconds').textContent = seconds.toString().padStart(2,'0');
+  document.getElementById('days').textContent = days.toString().padStart(2, '0');
+  document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+  document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+  document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 }
 
 updateCountdown();
 const timerInterval = setInterval(updateCountdown, 1000);
-
-
