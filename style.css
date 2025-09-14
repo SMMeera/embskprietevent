@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 :root {
-  --navbar-bg: #000000;
+  --navbar-bg: #D8F3DC;
   --main-blue: #6495ED;
   --section-bg: #f8f9fa;
   --card-bg: #fff;
@@ -36,7 +36,7 @@ body::before {
 header {
   background: var(--navbar-bg);
   box-shadow: var(--box-shadow);
-  padding: 0.7rem 1rem;
+  padding: 0.33rem 1rem;
   position: fixed;
   width: 100vw;
   height: 70px;
@@ -81,15 +81,16 @@ header {
   margin: 0 10px;
 }
 nav a {
-  color: #fff;
-  font-weight: 500;
+  color: var(--main-blue);
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 8px 12px;
-  font-size: 1rem;
+  padding: 5px 6px;
+  font-size: 0.97rem;
   border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.28s, color 0.28s;
   white-space: nowrap;
+  letter-spacing: 0.6px;
 }
 nav a:hover {
   background: var(--hover-green);
@@ -438,8 +439,9 @@ footer {
 /* --- MOBILE NAVBAR SHRINK FIX --- */
 @media (max-width: 600px) {
   header {
-    height: auto;
-    padding: 0.4rem 0;
+    padding: 0.13rem 0;
+    min-height: 36px;
+   
   }
   .navbar-content {
     flex-direction: column;
@@ -448,23 +450,25 @@ footer {
     gap: 0.1rem;
   }
   .nav-logo, .nav-logo.large {
-    height: 30px;
+    height: 26px;
     margin: 2px auto 0 auto;
+    max-width: 60vw;
   }
   .nav-links {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
     margin: 0 0 1px 0;
     width: 98vw;
   }
   nav a {
-    font-size: 0.93rem;
-    padding: 6px 8px;
-    letter-spacing: 0.6px;
+    font-size: 0.91rem;
+    padding: 4px 5px;
+    
   }
   body, main {
-    padding-top: 84px;
+    padding-top: 56px;
   }
 }
+
