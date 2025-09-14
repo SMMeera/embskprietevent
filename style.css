@@ -841,6 +841,52 @@ nav a:hover {
     border-radius: 6px;
   }
 }
+/* Hide hamburger by default */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Desktop nav links horizontal */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6px;
+}
+
+/* Mobile nav (hide links, show hamburger) */
+@media (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  nav a {
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 100%;
+    color: white;
+  }
+}
+
 
 
 
