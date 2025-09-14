@@ -9,6 +9,19 @@
   --box-shadow: 0 8px 24px rgba(100,149,237,0.25);
   --mint: #D8F3DC;
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--section-bg);
@@ -373,7 +386,7 @@ footer {
   margin: 0 auto;
 }
 .countdown-card, .agenda-card {
-  background: var(--mint) !important;
+  background: rgba(216, 243, 220, 0.7); !important;
   border-radius: 28px;
   box-shadow: var(--box-shadow);
   max-width: 1200px;
@@ -571,5 +584,6 @@ footer {
     border-radius: 10px;
   }
 }
+
 
 
