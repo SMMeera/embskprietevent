@@ -27,7 +27,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background-image: url('image/background.jpg'); 
+  background-image: url('images/background.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -403,7 +403,7 @@ footer {
   }
 }
 .countdown-card, .agenda-card {
-  background: var(--mint);
+  background: rgba(216, 243, 220, 0.7);
   border-radius: 28px;
   box-shadow: var(--box-shadow);
   max-width: 1200px;
@@ -577,6 +577,7 @@ footer {
     border-radius: 10px;
   }
 }
+
 
 
 
