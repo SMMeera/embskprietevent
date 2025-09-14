@@ -741,3 +741,31 @@ footer {
     margin: 0;
   }
 }
+@media (max-width: 700px) {
+  header {
+    height: 42px !important;
+    min-height: 0 !important;
+    padding: 0.08rem 0.5rem !important;
+    line-height: 1 !important;
+  }
+  .navbar-content {
+    min-height: 0 !important;
+    height: 42px !important;
+    padding: 0 2px !important;
+  }
+  .nav-logo, .nav-logo.large {
+    height: 24px !important;
+    margin: 0 3px !important;
+    max-width: 55px !important;
+  }
+  .hamburger {
+    font-size: 1.6rem !important;
+    margin-left: 0 !important;
+    height: 32px !important;
+    padding: 0 !important;
+    display: block !important;
+    align-self: center;
+  }
+}
+
+
