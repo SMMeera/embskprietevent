@@ -8,21 +8,28 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
 </head>
 <body>
-  <header>
-    <div class="navbar-content">
-      <img src="images/kprlogo.png" alt="KPRIET Logo" class="nav-logo"/>
-      <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="about.html" target="_blank" rel="noopener">About Us</a>
-        <a href="#poster">Poster</a>
-        <a href="#coordinators">Coordinators</a>
-        <a href="members.html" target="_blank" rel="noopener">Members</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <img src="images/embslogo.png" alt="EMBS Logo" class="nav-logo large"/>
-    </div>
-  </header>
+ <header>
+  <div class="navbar-content">
+    <img src="images/kprlogo.png" alt="KPRIET Logo" class="nav-logo"/>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="about.html" target="_blank" rel="noopener">About Us</a>
+      <a href="#poster">Poster</a>
+      <a href="#coordinators">Coordinators</a>
+      <a href="members.html" target="_blank" rel="noopener">Members</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <img src="images/embslogo.png" alt="EMBS Logo" class="nav-logo large"/>
+  </div>
+</header>
+
+<script>
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+</script>
+
   
   <section class="card hero-card" id="home">
     <h1>Welcome to IEEE KPRIET EMBS SBC</h1>
@@ -110,3 +117,4 @@
   </script>
 </body>
 </html>
+
